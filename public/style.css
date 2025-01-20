@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+h1, h2{
+    font-weight: 700;
+}
+
+p{
+    font-weight: 300;
+}
+
+.navigation {
+   display: flex;
+   justify-content: right;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.navigation a:hover {
+    color: #8E44AD;
+    font-weight: 600;
+}
+
+.container {
+    justify-content: space-between;
+    margin-top: 100px;
+    gap: 50px;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0 100px;
+}
+
+section {
+    background: rgba(52, 52, 52, 0.616);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(142, 68, 173, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.title {
+    padding-top: 50px;
+    text-align: center;
+}
