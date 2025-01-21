@@ -11,16 +11,17 @@
 <body>
     <header>
     <nav class="navigation">
-        <li><a href="#">Who am I?</a></li>
-        <li><a href="#">Why Software Engineer?</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact Me</a></li>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
     </nav>
 </header>
 
 <h1 class="title">About Me</h1>
-<div class="container">
+<div id="about" class="container">
     <section id="Me">
         <h1>Who am I?</h1>
         <p>I'm Leonardo and I will be soon a Software Engineer</p>
@@ -30,7 +31,37 @@
         <p>Bla bla bla</p>
     </section>
 </div>
+<div id="skills" class="chart-container">
+    <h1 class="title">Skills</h1>
+    <div class="charts">
+        <div class="chart-item">
+            <canvas id="htmlChart"></canvas>
+            <p>HTML</p>
+        </div>
+        <div class="chart-item">
+            <canvas id="cssChart"></canvas>
+            <p>CSS</p>
+        </div>
+        <div class="chart-item">
+            <canvas id="jsChart"></canvas>
+            <p>JavaScript</p>
+        </div>
+        <div class="chart-item">
+            <canvas id="pythonChart"></canvas>
+            <p>Python</p>
+        </div>
+        <div class="chart-item">
+            <canvas id="csharpChart"></canvas>
+            <p>C#</p>
+        </div>
+    </div>
+</div>
+<div id="project" class="project-container">
+<h1 class="title">Projects</h1>
+</div>
+
     <canvas id="starCanvas"></canvas>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

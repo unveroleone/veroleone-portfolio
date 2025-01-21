@@ -6,15 +6,17 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 
-canvas {
+#starCanvas{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     display: block;
+    z-index: -1;
 }
 h1, h2{
     font-weight: 700;
@@ -25,21 +27,42 @@ p{
 }
 
 .navigation {
-   display: flex;
-   justify-content: right;
+    display: flex;
+    justify-content: right;
 }
 
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-top: 10px;
+}
+
+.navigation li {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    position: relative;
+    z-index: 10;
+}
+
+
 .navigation a {
-    color: white;
+    color: #8d44ad;
     text-decoration: none;
     padding: 14px 20px;
     display: block;
+    transition: all 0.3s ease;
+    font-weight: 600;
 }
 
 .navigation a:hover {
-    color: #8E44AD;
-    font-weight: 600;
+    text-shadow: #fff 0 0 12px;
 }
+
 
 .container {
     justify-content: space-between;
@@ -65,4 +88,44 @@ section {
 .title {
     padding-top: 50px;
     text-align: center;
+}
+
+.chart-container {
+    width: 80%;
+    max-width: 900px;
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.chart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+.chart-item canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.chart-item p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #fff;
 }
