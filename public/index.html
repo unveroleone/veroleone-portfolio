@@ -6,62 +6,66 @@
     <title>Leo's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 
 <body>
     <header>
-    <nav class="navigation">
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-        </ul>
-    </nav>
-</header>
-
-<h1 class="title">About Me</h1>
-<div id="about" class="container">
-    <section id="Me">
-        <h1>Who am I?</h1>
-        <p>I'm Leonardo and I will be soon a Software Engineer</p>
-    </section>
-    <section id="Me">
-        <h1>Why Software Engeenering?</h1>
-        <p>Bla bla bla</p>
-    </section>
-</div>
-<div id="skills" class="chart-container">
-    <h1 class="title">Skills</h1>
-    <div class="charts">
-        <div class="chart-item">
-            <canvas id="htmlChart"></canvas>
-            <p>HTML</p>
-        </div>
-        <div class="chart-item">
-            <canvas id="cssChart"></canvas>
-            <p>CSS</p>
-        </div>
-        <div class="chart-item">
-            <canvas id="jsChart"></canvas>
-            <p>JavaScript</p>
-        </div>
-        <div class="chart-item">
-            <canvas id="pythonChart"></canvas>
-            <p>Python</p>
-        </div>
-        <div class="chart-item">
-            <canvas id="csharpChart"></canvas>
-            <p>C#</p>
-        </div>
-    </div>
-</div>
-<div id="project" class="project-container">
-<h1 class="title">Projects</h1>
-</div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <canvas id="starCanvas"></canvas>
-    <script type="module" src="script.js"></script>
+
+    <h1 class="title">About Me</h1>
+    <div id="about" class="container">
+        <section id="who">
+            <h1>Who am I?</h1>
+            <p>I'm Leonardo and I will be soon a Software Engineer</p>
+        </section>
+        <section id="why">
+            <h1>Why Software Engineering?</h1>
+            <p>Bla bla bla</p>
+        </section>
+    </div>
+
+    <div id="skills" class="chart-container">
+        <h1 class="title">Skills</h1>
+        <div class="charts">
+            <div class="chart-item">
+                <canvas id="htmlChart"></canvas>
+                <p>HTML</p>
+            </div>
+            <div class="chart-item">
+                <canvas id="cssChart"></canvas>
+                <p>CSS</p>
+            </div>
+            <div class="chart-item">
+                <canvas id="jsChart"></canvas>
+                <p>JavaScript</p>
+            </div>
+            <div class="chart-item">
+                <canvas id="pythonChart"></canvas>
+                <p>Python</p>
+            </div>
+            <div class="chart-item">
+                <canvas id="csharpChart"></canvas>
+                <p>C#</p>
+            </div>
+        </div>
+    </div>
+        
+    <div id="projects" class="project-container">
+        <h1 class="title">Projects</h1>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
