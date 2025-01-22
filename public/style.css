@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background: black;
@@ -37,6 +41,21 @@ p{
 .navigation {
     display: flex;
     justify-content: right;
+    position: fixed; 
+    top: 0;                     
+    width: 100%;      
+    z-index: 1000;    
+}
+
+.nav-list {
+    display: inline-block;
+    padding: 10px 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.scrolled .nav-list {
+    background-color: rgba(52, 52, 52, 0.616);
+    border-radius: 20px;
 }
 
 .navigation ul {
@@ -52,16 +71,10 @@ p{
     padding: 0;
 }
 
-.navigation {
-    position: relative;
-    z-index: 10;
-}
-
-
 .navigation a {
     color: #8d44ad;
     text-decoration: none;
-    padding: 14px 20px;
+    padding: 16px 24px; /* Größere Klickfläche */
     display: block;
     transition: all 0.3s ease;
     font-weight: 600;
@@ -92,6 +105,7 @@ section {
     flex: 1;
     min-width: 300px;
     text-align: center;
+    cursor: pointer;
 }
 
 .title {

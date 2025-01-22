@@ -132,8 +132,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     createDonutChart('htmlChart', 90, 'rgba(235, 111, 54, 0.7)');
     createDonutChart('cssChart', 80, 'rgba(86, 165, 255, 0.7)');
-    createDonutChart('jsChart', 60, 'rgba(255, 219, 99, 0.7)');
+    createDonutChart('jsChart', 40, 'rgba(255, 219, 99, 0.7)');
     createDonutChart('pythonChart', 30, 'rgba(214, 55, 24, 0.7)');
     createDonutChart('csharpChart', 40, 'rgba(116, 24, 214, 0.7)');
 });
 
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.navigation');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+;
+
+let isScrolling;
+
+window.addEventListener('scroll', () => {
+    const navList = document.querySelector('.nav-list');
+
+    if (window.scrollY > 0) {
+        navList.classList.add('scrolled');
+
+        // Löscht den alten Timer und setzt ihn zurück
+        clearTimeout(isScrolling);
+        
+        // Entferne die Klasse nach 3 Sekunden Inaktivität
+        isScrolling = setTimeout(() => {
+            navList.classList.remove('scrolled');
+        }, 3000);
+    } else {
+        navList.classList.remove('scrolled');
+    }
+});
