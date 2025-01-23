@@ -145,24 +145,5 @@ window.addEventListener('scroll', () => {
         nav.classList.remove('scrolled');
     }
 });
-;
 
-let isScrolling;
 
-window.addEventListener('scroll', () => {
-    const navList = document.querySelector('.nav-list');
-
-    if (window.scrollY > 0) {
-        navList.classList.add('scrolled');
-
-        // Löscht den alten Timer und setzt ihn zurück
-        clearTimeout(isScrolling);
-        
-        // Entferne die Klasse nach 3 Sekunden Inaktivität
-        isScrolling = setTimeout(() => {
-            navList.classList.remove('scrolled');
-        }, 3000);
-    } else {
-        navList.classList.remove('scrolled');
-    }
-});

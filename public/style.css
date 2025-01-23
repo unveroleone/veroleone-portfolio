@@ -58,6 +58,10 @@ p{
     border-radius: 20px;
 }
 
+.scrolled .nav-list:hover{
+    transform: translateY(-10px);
+}
+
 .navigation ul {
     list-style: none;
     margin: 0;
@@ -108,6 +112,11 @@ section {
     cursor: pointer;
 }
 
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(142, 68, 173, 0.8);
+}
+
 .title {
     padding-top: 50px;
     text-align: center;
@@ -140,6 +149,11 @@ section {
     flex-direction: column;
     align-items: center;
     width: 150px;
+    transition: all 0.5s ease;
+}
+
+.chart-item:hover{
+    transform: translateY(-10px);
 }
 
 .chart-item canvas {
@@ -152,5 +166,19 @@ section {
     font-weight: bold;
     margin-top: 10px;
     color: #fff;
+}
+
+.github-stats img {
+    width: 60%;
+    background-color: transparent;
+    margin: 20px;
+}
+
+.github-img {
+    transition: all 0.5s ease;
+}
+
+.github-img:hover {
+    transform: scale(1.1);
 }
 
