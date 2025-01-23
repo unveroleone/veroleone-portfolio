@@ -81,9 +81,117 @@
             <img class="github-img" src="https://github-readme-stats.vercel.app/api/top-langs/?username=veroleone&layout=compact&theme=dark" alt="Top Sprachen">
         </div>
         
-    <div id="projects" class="project-container">
-        <h1 class="title">Projects</h1>
-    </div>
+        <div id="projects" class="project-container">
+            <h1 class="projects-title">Projects</h1>
+        
+            <div class="project-sections">
+                <div class="mini-section-wrapper">
+                    <h2 class="section-title">Ongoing</h2>
+                    <div class="mini-sections" id="ongoing-section">
+                        <div class="app" id="home-assistant" onclick="openModal('modal-home-assistant', event)">
+                            <img src="/img/home-assistant.svg" alt="logo">
+                            <p class="app-label">Home Assistant</p>
+                        </div>
+                        <div class="app" id="firmware" onclick="openModal('modal-signal-x', event)">
+                            <img src="/img/signal-x.svg" alt="logo">
+                            <p class="app-label">Signal-X</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="mini-section-wrapper">
+                    <h2 class="section-title">Completed</h2>
+                    <div class="mini-sections" id="completed-section">
+                        <div class="app" id="HackStarterKit" onclick="openModal('modal-hackstarter', event)">
+                            <img src="/img/hacker.svg" alt="logo">
+                            <p class="app-label">HackStarter</p>
+                        </div>
+                        <div class="app" id="consultant" onclick="openModal('modal-consultant', event)">
+                            <img src="/img/consultant.svg" alt="logo">
+                            <p class="app-label">Consultant</p>
+                        </div>
+                        <div class="app" id="restaurant" onclick="openModal('modal-restaurant', event)">
+                            <img src="/img/restaurant.svg" alt="logo">
+                            <p class="app-label">Restaurat</p>
+                        </div>
+                        <div class="app" id="portfolio" onclick="openModal('modal-portfolio', event)">
+                            <img src="/img/user-logo.svg" alt="logo">
+                            <p class="app-label">Porfolio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-home-assistant" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-home-assistant')">&times;</span>
+                <h2>Home Assistant</h2>
+                <p>Automate your home with a smart system using Raspberry Pi.</p>
+                <img src="/img/home-assistant.svg" alt="Home Assistant">
+            </div>
+        </div>
+        
+        <div id="modal-signal-x" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-signal-x')">&times;</span>
+                <h2>Signal-X</h2>
+                <p>Firmware development for IoT security devices.</p>
+                <img src="/img/signal-x.svg" alt="Signal-X">
+            </div>
+        </div>
+        
+        <div id="modal-hackstarter" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-hackstarter')">&times;</span>
+                <h2>HackStarter</h2>
+                <p>A beginner-friendly guide to ethical hacking.</p>
+                <img src="/img/hacker.svg" alt="HackStarter">
+                <button class="btn-github">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
+                        fill="currentcolor"
+                      ></path>
+                    </svg>
+                    <span>View on Github</span>
+                  </button>
+                  
+            </div>
+        </div>
+        
+        <div id="modal-consultant" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-consultant')">&times;</span>
+                <h2>Consultant</h2>
+                <p>IT consulting services for businesses.</p>
+                <img src="/img/consultant.svg" alt="Consultant">
+            </div>
+        </div>
+
+        <div id="modal-restaurant" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-restaurant')">&times;</span>
+                <h2>Restaurat</h2>
+                <p>Making a Website for a restaurant</p>
+                <img src="/img/restaurant.svg" alt="restaurant">
+            </div>
+        </div>
+
+        <div id="modal-portfolio" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('modal-portfolio')">&times;</span>
+                <h2>Portfolio</h2>
+                <p>Making a professional Portfolio</p>
+                <img src="/img/user-logo.svg" alt="user-logo">
+            </div>
+        </div>
 
     <div id="socials" class="socials-container">
         <h1 class="title">My Socials</h1>
@@ -91,5 +199,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
+    <script src="modal.js" defer></script>
 </body>
 </html>

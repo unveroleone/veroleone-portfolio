@@ -23,13 +23,6 @@ body {
     z-index: -1;
 }
 
-#projects {
-    width: 100%;
-    height: 500px;
-    position: relative;
-    background: transparent;
-}
-
 h1, h2{
     font-weight: 700;
 }
@@ -119,6 +112,7 @@ section:hover {
 
 .title {
     padding-top: 50px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -182,3 +176,180 @@ section:hover {
     transform: scale(1.1);
 }
 
+#projects {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.project-sections {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.mini-sections {
+    background: rgba(52, 52, 52, 0.616);
+    border-radius: 50px;
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: start;
+    transition: all ease 0.5s;
+}
+
+.mini-sections:hover {
+    transform: translateY(-10px);
+}
+
+.mini-section-wrapper {
+    text-align: center;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 15px;
+    height: 50px;
+    width: 50px;
+    background-color: #080808;
+    border-radius: 15px;
+    transition: all ease 0.5s;
+    position: relative;
+}
+
+.app img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.app p {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 10px;
+    position: absolute;
+    bottom: -30px;
+    white-space: nowrap;
+}
+
+.app:hover {
+    transform: scale(1.1);
+}
+
+.projects-title {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;;
+    overflow-y: auto;
+}
+
+.modal-content {
+    position: fixed;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 100vh;
+    min-height: 800px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    overflow-y: auto;
+}
+
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+
+.btn-github {
+    cursor: pointer;
+    display: flex;
+    gap: 0.5rem;
+    border: none;
+  
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 100px;
+    font-weight: 800;
+    place-content: center;
+  
+    padding: 0.75rem 1rem;
+    font-size: 0.825rem;
+    line-height: 1rem;
+  
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    color: #fff;
+  }
+  
+  .btn-github:hover {
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(252, 232, 3, 0.08);
+    color: #8d44ad;
+    transform: translate(0, -0.25rem);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
