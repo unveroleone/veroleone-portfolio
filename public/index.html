@@ -7,15 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="icons-black/favicon-32x32.png" media="(prefers-color-scheme: light)">
-    <link rel="icon" type="image/png" sizes="192x192" href="icons-black/android-chrome-192x192.png" media="(prefers-color-scheme: light)">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons-black/apple-touch-icon.png" media="(prefers-color-scheme: light)">
-    <link rel="manifest" href="icons-black/site.webmanifest" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons-black/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons-black/favicon-32x32.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons-black/android-chrome-192x192.png" media="(prefers-color-scheme: light)">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons-black/apple-touch-icon.png" media="(prefers-color-scheme: light)">
+    <link rel="manifest" href="/icons-black/site.webmanifest" media="(prefers-color-scheme: light)">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="icons-white/favicon-32x32.png" media="(prefers-color-scheme: dark)">
-    <link rel="icon" type="image/png" sizes="192x192" href="icons-white/android-chrome-192x192.png" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons-white/apple-touch-icon.png" media="(prefers-color-scheme: dark)">
-    <link rel="manifest" href="icons-white/site.webmanifest" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons-white/favicon-32x32.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons-white/android-chrome-192x192.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons-white/apple-touch-icon.png" media="(prefers-color-scheme: dark)">
+    <link rel="manifest" href="/icons-white/site.webmanifest" media="(prefers-color-scheme: dark)">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -112,7 +113,7 @@
                         </div>
                         <div class="app" id="restaurant" onclick="openModal('modal-restaurant', event)">
                             <img src="/img/restaurant.svg" alt="logo">
-                            <p class="app-label">Restaurat</p>
+                            <p class="app-label">Restaurant</p>
                         </div>
                         <div class="app" id="portfolio" onclick="openModal('modal-portfolio', event)">
                             <img src="/img/user-logo.svg" alt="logo">
@@ -126,9 +127,29 @@
         <div id="modal-home-assistant" class="modal">
             <div class="modal-content">
                 <span class="close-btn" onclick="closeModal('modal-home-assistant')">&times;</span>
-                <h2>Home Assistant</h2>
-                <p>Automate your home with a smart system using Raspberry Pi.</p>
-                <img src="/img/home-assistant.svg" alt="Home Assistant">
+                <h1>My Smart Home Project with Home Assistant</h1>
+    
+                <p>I am currently working on a project to make my home smart using <strong>Home Assistant</strong>, an open-source automation platform. My goal is to integrate and control various smart devices within my two-story house, focusing on automating my blinds and other smart appliances for better convenience and efficiency.</p>
+
+                <h2>Technologies I Use</h2>
+
+                <h3>Zigbee Dongle</h3>
+                <p>I am using a Zigbee dongle to connect and control various smart home devices wirelessly. Zigbee allows me to create a reliable and energy-efficient mesh network that connects sensors, lights, and other smart gadgets seamlessly.</p>
+
+                <h3>EnOcean Dongle</h3>
+                <p>My blinds operate using EnOcean technology, which provides energy-efficient and battery-free control through energy harvesting. I am integrating an EnOcean dongle with Home Assistant to manage my blinds remotely and automate their movement based on factors such as time of day and sunlight levels.</p>
+
+                <h2>Challenges I Face</h2>
+                <p>One of the biggest challenges I am currently dealing with is <strong>controlling my blinds (Storen)</strong> effectively. They use the <strong>UP-Jalousieaktor 1-Kanal 6A UPJ230/01</strong> actuator, which requires careful configuration and calibration to work seamlessly with Home Assistant. Ensuring smooth and precise control has been a complex process due to protocol limitations and compatibility issues.</p>
+
+                <h2>Future Plans</h2>
+                <ul>
+                    <li>Fine-tune the EnOcean integration for better reliability and performance.</li>
+                    <li>Expand my smart home setup by adding more Zigbee devices, such as smart bulbs and security sensors.</li>
+                    <li>Explore automation scenarios such as voice control, adaptive shading based on temperature, and geofencing for energy efficiency.</li>
+                </ul>
+
+                <p>This project is a great opportunity for me to expand my knowledge in IoT technologies and develop my skills in integrating different communication protocols into a unified home automation system.</p>
             </div>
         </div>
         
