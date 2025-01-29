@@ -278,8 +278,8 @@ section:hover {
     color: white;
     padding: 20px;
     border-radius: 10px;
-    max-height: 100vh;
-    min-height: 800px;
+    max-height: 80vh;
+    min-height: 400px;
     text-align: center;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     left: 50%;
@@ -288,8 +288,13 @@ section:hover {
     opacity: 0;
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
 
 .modal.show {
     opacity: 1;
